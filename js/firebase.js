@@ -15,13 +15,14 @@ const app = initializeApp(firebaseConfig);
 
 const database = getDatabase(app);
 
-const saveAppointment = ({ appointmentID, patientName, patientEmail, patientNumber }) => {
+const saveAppointment = ({ patientName, patientEmail, appointmentDate, appointmentTime}) => {
     const appointmentsRef = ref(database, 'appointments');
     const newAppointmentRef = push(appointmentsRef);
     const appointmentData = {
         patientName,
         patientEmail,
-        patientNumber,
+        appointmentDate,
+        appointmentTime,
         createdAt: new Date().toISOString()
     };
     return set(newAppointmentRef, appointmentData)
