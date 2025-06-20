@@ -1,6 +1,59 @@
 "use strict";
 
 import { saveAppointment } from "./firebase.js";
+import { fetchData } from "./functions.js";
+
+
+const loadPosts = async () => {
+    const container = document.getElementById('ig-posts');
+    if (!container) return;
+    const result = await fetchData('posts.json');
+    if (result.success) {
+        container.innerHTML = '';
+        result.body.forEach(pub => {
+            container.innerHTML += `
+                <div class="md:px-4 md:w-1/2 xl:w-1/4 mt-4 md:mt-0">
+                  <div class="bg-white rounded border border-gray-300">
+                    <a href="${pub.url}" target="_blank" title="${pub.titulo}">
+                      <img src="${pub.img}" alt="${pub.titulo}" class="w-full h-48 object-cover rounded-t" />
+                    </a>
+                    <div class="p-4">
+                      <p class="text-lg font-semibold leading-tight mt-4">${pub.titulo}</p>
+                      <p class="text-gray-600 mt-1">${pub.descripcion}</p>
+                      <a href="${pub.url}" target="_blank" class="block mt-4 text-teal-500 font-semibold">Ver en Instagram</a>
+                    </div>
+                  </div>
+                </div>
+            `;
+        });
+    } else {
+        container.innerHTML = `<p class="text-red-500">${result.error}</p>`;
+    }
+};
+
+
+// // Ejemplo de agregar una publicación (POST)
+// const addPost = async (nuevaPublicacion) => {
+//     const result = await postData('https://jsonplaceholder.typicode.com/posts', nuevaPublicacion);
+//     if (result.success) {
+//         alert('¡Publicación enviada correctamente (POST simulado)!');
+//         console.log('Respuesta del POST:', result.body);
+//     } else {
+//         alert('Error al enviar la publicación.');
+//         console.error(result.error);
+//     }
+// };
+
+
+// // Para probar el POST, descomenta esto:
+// addPost({
+//     img: "images/ejemplo.jpg",
+//     titulo: "Nueva publicación desde POST",
+//     descripcion: "Esto es una prueba de POST.",
+//     url: "https://instagram.com/p/ejemplo3"
+// });
+
+
 
 
 const formatTimeTo12Hour = (time24) => {
@@ -53,4 +106,5 @@ const enableForm = () => {
 
 (async () => {
     enableForm();
+    loadPosts();
 })();

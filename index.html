@@ -18,6 +18,10 @@
       display: block;
     }
 
+    /* #ChooseUs {
+      min-height: 750px;
+    } */
+
     a,
     span {
       position: relative;
@@ -82,7 +86,7 @@
 
     <!-- start header -->
     <header id="header" class="fixed top-0 left-0 w-full z-50 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 transition-colors duration-500 ease-in-out bg-black bg-opacity-0 backdrop-blur-lg shadow-lg">
-      <div class="hidden md:flex justify-between items-center py-2 border-b text-sm py-3"
+      <!-- <div class="hidden md:flex justify-between items-center py-2 border-b text-sm py-3"
         style="border-color: rgba(255,255,255,.25)">
         <div class="">
           <ul class="flex text-white">
@@ -144,7 +148,7 @@
             </li>
           </ul>
         </div>
-      </div>
+      </div> -->
       <div class="flex flex-wrap items-center justify-between py-6">
         <div class="w-1/2 md:w-auto">
           <a href="index.html" class="text-white font-bold text-2xl">
@@ -161,14 +165,14 @@
           <nav
             class="w-full bg-white md:bg-transparent rounded shadow-lg px-6 py-4 mt-4 text-center md:p-0 md:mt-0 md:shadow-none">
             <ul class="md:flex items-center">
-              <li><a class="py-2 inline-block md:text-white md:hidden lg:block font-semibold" href="#Us">Acerca de nosotros</a></li>
+              <li><a class="py-2 inline-block md:text-white md:hidden lg:block font-semibold" href="#AboutUs">Acerca de Nosotros</a></li>
               <li class="md:ml-4"><a class="py-2 inline-block md:text-white md:px-2 font-semibold"
-                  href="#">Servicios</a></li>
+                  href="#ChooseUs">Pór que elegirnos?</a></li>
               <li class="md:ml-4"><a class="py-2 inline-block md:text-white md:px-2 font-semibold"
-                  href="#">Testimonios</a></li>
-              <li class="md:ml-4 md:hidden lg:block"><a class="py-2 inline-block md:text-white md:px-2 font-semibold"
-                  href="#">Blog</a></li>
-              <li class="md:ml-4"><a class="py-2 inline-block md:text-white md:px-2 font-semibold" href="#">Contáctame</a></li>
+                  href="#Posts">Nuestros servicios</a></li>
+              <!-- <li class="md:ml-4 md:hidden lg:block"><a class="py-2 inline-block md:text-white md:px-2 font-semibold"
+                  href="#">Publicaciones</a></li>
+              <li class="md:ml-4"><a class="py-2 inline-block md:text-white md:px-2 font-semibold" href="#">Contáctame</a></li> -->
               <li class="md:ml-6 mt-3 md:mt-0">
                 <a class="inline-block font-semibold px-4 py-2 text-white bg-blue-600 md:bg-transparent md:text-white border border-white rounded"
                   href="#appointment_form">Agenda una cita</a>
@@ -198,7 +202,7 @@
     <!-- end hero -->
 
     <!-- start about -->
-    <section id="Us" class="relative px-4 py-16 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 lg:py-32">
+    <section id="AboutUs" class="relative px-4 py-16 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 lg:py-32">
       <div class="flex flex-col lg:flex-row lg:-mx-8">
         <div class="w-full lg:w-1/2 lg:px-8">
           <h2 class="text-3xl leading-tight font-bold mt-4">Bienvenido al consultorio de Imagenología</h2>
@@ -264,12 +268,27 @@
     </section>
     <!-- end about -->
 
-    <!-- start testimonials -->
-    <section class="relative bg-gray-100 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-16 lg:py-32">
+    <!-- start choose us -->
+    <section id="ChooseUs" class="relative bg-gray-100 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-16 lg:py-32">
       <div class="flex flex-col lg:flex-row lg:-mx-8">
         <div class="w-full lg:w-1/2 lg:px-8">
+          
+          <p class="text-lg mt-4 font-semibold">Tu salud merece lo mejor: experiencia, tecnología y un trato que te haga sentir en confianza</p>
+          <p class="mt-2 leading-relaxed text-justify">
+            En nuestro centro de imagenología médica, combinamos años de trayectoria con tecnología de vanguardia para ofrecerte diagnósticos precisos y oportunos. 
+            Nos especializamos en brindar estudios con altos estándares de calidad, realizados por profesionales altamente capacitados y en constante actualización.
+          </p>
+          <!-- <p class="mt-2 leading-relaxed text-justify">
+            Pero sabemos que no todo es lo técnico. Por eso, nuestro verdadero diferencial está en el trato humano y empático que ofrecemos desde el primer momento. 
+            Nos tomamos el tiempo para escucharte, resolver tus dudas y hacer que cada visita sea una experiencia cómoda y segura.
+          </p> -->
           <h2 class="text-3xl leading-tight font-bold mt-4">¿Por qué elegirnos?</h2>
-          <p class="mt-2 leading-relaxed">Contamos con años de experiencia en el área de imagenología médica, tecnología de punta y un trato humano y profesional. Nuestro objetivo es brindarte un diagnóstico confiable y una atención cálida.</p>
+          <ul class="pl-4">
+            <li class="mt-2">✔️ Profesionales con amplia experiencia en imagenología</li>
+            <li class="mt-2">✔️ Atención personalizada y adaptada a tus necesidades</li>
+            <li class="mt-2">✔️ Resultados rápidos y confiables</li>
+            <li class="mt-2">✔️ Equipos modernos y calibrados para obtener imágenes claras y confiables.</li>
+          </ul>
         </div>
         <div class="w-full md:max-w-md md:mx-auto lg:w-1/2 lg:px-8 mt-12 mt:md-0">
           <!-- Testimonio con imagen de paciente -->
@@ -278,57 +297,18 @@
         </div>
       </div>
     </section>
-    <!-- end testimonials -->
+    <!-- end choose us -->
 
-    <!-- start blog -->
-    <section class="relative bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-32">
+    <!-- start posts -->
+    <section id="Posts" class="relative bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-32">
       <div class="">
-        <h2 class="text-3xl leading-tight font-bold">Blog de Salud</h2>
-        <p class="text-gray-600 mt-2 md:max-w-lg">Encuentra información útil sobre estudios de imagen, prevención y bienestar.</p>
+        <h2 class="text-3xl leading-tight font-bold">Nuestros Servicios</h2>
+        <p class="text-gray-600 mt-2 md:max-w-lg">Mira nuestros últimos trabajos que hemos brindado a nuestros clientes</p>
         <a href="#" title="" class="inline-block text-teal-500 font-semibold mt-6 mt:md-0">Ver todas las publicaciones</a>
       </div>
-      <div class="md:flex mt-12 md:-mx-4">
-        <div class="md:px-4 md:w-1/2 xl:w-1/4">
-          <div class="bg-white rounded border border-gray-300">
-            <img src="images/diagnostico.jpg" alt="¿Por qué es importante un diagnóstico por imágenes?" class="w-full h-48 object-cover rounded-t" />
-            <div class="p-4">
-              <div class="flex items-center text-sm">
-                <span class="text-teal-500 font-semibold">Imagenología</span>
-                <span class="ml-4 text-gray-600">19 Jun, 2025</span>
-              </div>
-              <p class="text-lg font-semibold leading-tight mt-4">¿Por qué es importante un diagnóstico por imágenes?</p>
-              <p class="text-gray-600 mt-1">Descubre cómo los estudios de imagen ayudan a detectar enfermedades a tiempo.</p>
-              <div class="flex items-center mt-4">
-                <img src="images/drjuanronquillo.jpg" alt="Dr. Juan Carlos Ronquillo" class="w-8 h-8 rounded-full object-cover" />
-                <div class="ml-4">
-                  <p class="text-gray-600">Por <span class="text-gray-900 font-semibold">Dr. Juan Carlos Ronquillo</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="md:px-4 md:w-1/2 xl:w-1/4 mt-4 md:mt-0">
-          <div class="bg-white rounded border border-gray-300 ">
-            <img src="images/independent.jpeg" alt="Preparación para tu estudio de imagen" class="w-full h-48 object-cover rounded-t" />
-            <div class="p-4">
-              <div class="flex items-center text-sm">
-                <span class="text-teal-500 font-semibold">Salud</span>
-                <span class="ml-4 text-gray-600">10 Jun, 2025</span>
-              </div>
-              <p class="text-lg font-semibold leading-tight mt-4">Preparación para tu estudio de imagen</p>
-              <p class="text-gray-600 mt-1">Consejos y recomendaciones para acudir a tu cita de imagenología.</p>
-              <div class="flex items-center mt-4">
-                <img src="images/drjuanronquillo.jpg" alt="Dr. Juan Carlos Ronquillo" class="w-8 h-8 rounded-full object-cover" />
-                <div class="ml-4">
-                  <p class="text-gray-600">Por <span class="text-gray-900 font-semibold">Dr. Juan Carlos Ronquillo</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div id="ig-posts" class="flex flex-wrap gap-6 mt-12 md:-mx-4"></div>
     </section>
-    <!-- end blog -->
+    <!-- end posts -->
 
      <!-- start appointment form -->
     <section id="appointment_form" class="bg-gray-100 min-h-screen flex items-center justify-center pt-32 pb-16">
@@ -487,5 +467,63 @@
     });
   </script>
   <script src="js/file01.js" type="module"></script>
+
+  <!-- <script>
+    document.querySelectorAll('a[href="#ChooseUs"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const section = document.getElementById('ChooseUs');
+        const header = document.getElementById('header');
+        const headerHeight = header ? header.offsetHeight : 0;
+        const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+        // Ajusta el offset para centrar mejor la sección (puedes cambiar el valor 100)
+        const offset = headerHeight + 40;
+      });
+    });
+  </script>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href.length > 1 && document.getElementById(href.substring(1))) {
+          e.preventDefault();
+          document.getElementById(href.substring(1)).scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script> -->
+
+  <script>
+    document.querySelectorAll('a[href="#ChooseUs"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const section = document.getElementById('ChooseUs');
+        const header = document.getElementById('header');
+        const headerHeight = header ? header.offsetHeight : 0;
+        const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+        const offset = headerHeight + 15;
+        window.scrollTo({
+          top: sectionTop - offset,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    document.querySelectorAll('a[href^="#"]:not([href="#ChooseUs"])').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href.length > 1 && document.getElementById(href.substring(1))) {
+          e.preventDefault();
+          document.getElementById(href.substring(1)).scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>

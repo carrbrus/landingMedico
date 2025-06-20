@@ -1,0 +1,14 @@
+[
+  {
+    "img": "images/diagnostico.jpg",
+    "titulo": "¿Por qué es importante un diagnóstico por imágenes?",
+    "descripcion": "Descubre cómo los estudios de imagen ayudan a detectar enfermedades a tiempo.",
+    "url": "https://instagram.com/p/ejemplo1"
+  },
+  {
+    "img": "images/independent.jpeg",
+    "titulo": "Preparación para tu estudio de imagen",
+    "descripcion": "Consejos y recomendaciones para acudir a tu cita de imagenología.",
+    "url": "https://instagram.com/p/ejemplo2"
+  }
+]
