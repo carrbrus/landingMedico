@@ -3,12 +3,16 @@
     "img": "images/diagnostico.jpg",
     "titulo": "¿Por qué es importante un diagnóstico por imágenes?",
     "descripcion": "Descubre cómo los estudios de imagen ayudan a detectar enfermedades a tiempo.",
-    "url": "https://www.diagnosticorojas.com.ar/blog/salud/beneficios-diagnostico-por-imagen/"
+    "url": "https://www.diagnosticorojas.com.ar/blog/salud/beneficios-diagnostico-por-imagen/",
+    "autor": "Dr. Juan Carlos Ronquillo",
+    "autorFoto": "images/drjuanronquillo.jpg"
   },
   {
     "img": "images/independent.jpeg",
     "titulo": "Preparación para tu estudio de imagen",
     "descripcion": "Consejos y recomendaciones para acudir a tu cita de imagenología.",
-    "url": "https://diaude.com.ar/preparacion-para-estudios-de-diagnostico-por-imagenes/"
+    "url": "https://diaude.com.ar/preparacion-para-estudios-de-diagnostico-por-imagenes/",
+    "autor": "Dr. Juan Carlos Ronquillo",
+    "autorFoto": "images/drjuanronquillo.jpg"
   }
 ]

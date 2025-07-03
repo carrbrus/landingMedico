@@ -236,7 +236,7 @@
             <img src="images/rayos-x.png" alt="Rayos X" class="h-20 mx-auto">
             <h4 class="text-xl font-bold mt-4">Rayos X</h4>
             <p class="mt-1">Diagnóstico rápido y seguro para diversas patologías.</p>
-            <a href="#" class="block mt-4">Leer más</a>
+            <a href="https://medlineplus.gov/spanish/xrays.html" class="block mt-4" target="_blank" rel="noopener">Leer más</a>
           </div>
         </div>
         <div class="md:w-1/2 md:px-4 mt-4 md:mt-0 lg:w-1/4">
@@ -244,7 +244,7 @@
             <img src="images/ecografia.png" alt="Ecografías" class="h-20 mx-auto">
             <h4 class="text-xl font-bold mt-4">Ecografías</h4>
             <p class="mt-1">Estudios no invasivos para un diagnóstico preciso.</p>
-            <a href="#" class="block mt-4">Leer más</a>
+            <a href="https://medlineplus.gov/spanish/pruebas-de-laboratorio/ecografia/" class="block mt-4" target="_blank" rel="noopener">Leer más</a>
           </div>
         </div>
         <div class="md:w-1/2 md:px-4 mt-4 md:mt-8 lg:mt-0 lg:w-1/4">
@@ -252,7 +252,7 @@
             <img src="images/tomografia.png" alt="Tomografías" class="h-20 mx-auto">
             <h4 class="text-xl font-bold mt-4">Tomografías</h4>
             <p class="mt-1">Imágenes detalladas para diagnósticos complejos.</p>
-            <a href="#" class="block mt-4">Leer más</a>
+            <a href="https://medlineplus.gov/spanish/ency/article/003330.htm" class="block mt-4" target="_blank" rel="noopener">Leer más</a>
           </div>
         </div>
         <!-- Otros estudios -->
@@ -261,7 +261,7 @@
             <img src="images/otrosestudios.svg" alt="Otros estudios" class="h-20 mx-auto">
             <h4 class="text-xl font-bold mt-4">Otros estudios</h4>
             <p class="mt-1">Consulta por otros servicios de imagenología.</p>
-            <a href="#" class="block mt-4">Leer más</a>
+            <a href="https://medlineplus.gov/spanish/ency/article/007451.htm" class="block mt-4" target="_blank" rel="noopener">Leer más</a>
           </div>
         </div>
       </div>
@@ -524,6 +524,45 @@
       });
     });
   </script>
+
+  <script>
+async function cargarPublicaciones() {
+  const res = await fetch('posts.json');
+  const publicaciones = await res.json();
+
+  function renderPublicaciones(lista) {
+    const contenedor = document.getElementById('ig-posts');
+    contenedor.innerHTML = '';
+    lista.forEach(pub => {
+      const card = document.createElement('div');
+      card.className = "bg-white rounded-lg shadow p-6 w-full md:w-80 flex flex-col justify-between";
+      card.innerHTML = `
+        <img src="${pub.img}" alt="${pub.titulo}" class="w-full h-40 object-cover rounded mb-4">
+        <h3 class="font-bold text-lg mb-2">${pub.titulo}</h3>
+        <p class="text-gray-600 mb-2">${pub.descripcion}</p>
+        <div class="flex items-center mt-2 mb-4">
+          <img src="${pub.autorFoto}" alt="${pub.autor}" class="w-8 h-8 rounded-full mr-2 border-2 border-blue-200 object-cover">
+          <span class="text-sm text-gray-500">${pub.autor}</span>
+        </div>
+        <a href="${pub.url}" target="_blank" class="text-blue-600 font-semibold hover:underline mt-auto">Leer más</a>
+      `;
+      contenedor.appendChild(card);
+    });
+  }
+
+  // Mostrar solo las 3 últimas por defecto
+  renderPublicaciones(publicaciones.slice(0, 3));
+
+  // Mostrar todas al hacer clic en "Ver todas las publicaciones"
+  document.querySelector('#Posts a').addEventListener('click', function(e) {
+    e.preventDefault();
+    renderPublicaciones(publicaciones);
+    this.style.display = 'none';
+  });
+}
+
+cargarPublicaciones();
+</script>
 
 </body>
 </html>
